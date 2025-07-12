@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Board Game</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    .dice { font-size: 100px; }
+    button { padding: 10px 20px; font-size: 20px; }
+  </style>
+</head>
+<body>
+  <h1>🎲 Dice Game</h1>
+  <div class="dice" id="dice">⚀</div>
+  <button onclick="rollDice()">Roll the Dice</button>
+
+  <script>
+    function rollDice() {
+      const diceFaces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+      const random = Math.floor(Math.random() * 6);
+      document.getElementById('dice').textContent = diceFaces[random];
+    }
+  </script>
+</body>
+</html>
